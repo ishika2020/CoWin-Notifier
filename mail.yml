@@ -1,0 +1,22 @@
+- hosts: localhost
+  vars_files:
+  - names.yml
+  - emails.yml
+  - cred.yml
+  tasks:
+  - name: Sending an e-mail using Gmail SMTP servers
+    mail:
+       host: smtp.gmail.com
+       port: 587
+       username: "{{ gmail }}"
+       password: "{{ password }}"
+       to: "{{ email }}"
+       subject: Registration Confirm!
+       body: "
+            Hello {{name}}!
+            
+            Email {{email}}
+
+            Thanks for registering !!
+
+            Stay Healthy, Stay Safe !! "

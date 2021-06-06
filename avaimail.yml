@@ -1,0 +1,20 @@
+- hosts: localhost
+  vars_files:
+  - names.yml
+  - emails.yml
+  - cred.yml
+  - availables.yml
+  tasks:
+  - name: Sending an e-mail using Gmail SMTP servers
+    mail:
+       host: smtp.gmail.com
+       port: 587
+       username: "{{ gmail }}"
+       password: "{{ password }}"
+       to: "{{ email }}"
+       subject: Vaccine available !!
+       body: " Hello !! {{ name }} \n
+
+       Vaccine is currently available in your locality !! \n
+
+       '{{ lookup('file', 'availables.yml') }}' "

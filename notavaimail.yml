@@ -1,0 +1,21 @@
+- hosts: localhost
+  vars_files:
+  - names.yml
+  - emails.yml
+  - cred.yml
+  tasks:
+  - name: Sending an e-mail using Gmail SMTP servers
+    mail:
+       host: smtp.gmail.com
+       port: 587
+       username: "{{ gmail }}"
+       password: "{{ password }}"
+       to: "{{ email }}"
+       subject: No Vaccine available !
+       body: "
+            Hello {{name}}!
+
+            Vaccine is not currently available in your locality !!
+            We will inform you when available !!
+
+            Stay Healthy, Stay Safe !! "
