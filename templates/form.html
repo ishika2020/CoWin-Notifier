@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script
+            src="https://kit.fontawesome.com/64d58efce2.js"
+            crossorigin="anonymous"
+        ></script>
+        <!-- <link rel="stylesheet" href="formstyle.css" /> -->
+        <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/formstyle.css') }}">
+    <title>Sign in & Sign up Form</title>
+</head>
+<body>
+    <div class="background">
+        <div class="container">
+            <div class="screen">
+                <div class="screen-header"></div>
+                <div class="screen-body">
+                    <div class="screen-body-item">
+                        <div class="app-title">
+                            <span>Vaccine Availability</span>
+                        </div>
+                        <div class="app-form">
+                            <form action="availability.html">
+                                <div class="app-form-group">
+                                    <input class="app-form-control" type="text" placeholder="Pincode" name="pincode">
+                                </div>
+                                <div class="app-form-group">
+                                    <input class="app-form-control" type="text" placeholder="Age" name="age">
+                                </div>
+                                <div class="app-form-group">
+                                    <input class="app-form-control" text="text" placeholder="Number of Days" name="days" >
+                                </div>
+                                <input type="submit" class="btn" value="Next" />
+                            </form>        
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
