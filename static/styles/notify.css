@@ -1,0 +1,56 @@
+*, *:before, *:after {
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  body {
+    background: linear-gradient(to right, #b5e2e4 30%, #41d8dd 70%);
+    font-size: 12px;
+  }
+  
+  body, button, input {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    letter-spacing: 1.4px;
+  }
+  
+  .background {
+    display: flex;
+    min-height: 100vh;
+  }
+  
+  .container {
+    flex: 0 1 700px;
+    margin: auto;
+    padding: 10px;
+  }
+  
+  .screen {
+    position: relative;
+    background: #fcfcfc;
+    border-radius: 15px;
+  }
+  
+  .screen:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 20px;
+    right: 20px;
+    bottom: 0;
+    border-radius: 15px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, .4);
+    z-index: -1;
+  }
+  
+  .screen-header {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    background: #4d4d4f;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+  }
+  
